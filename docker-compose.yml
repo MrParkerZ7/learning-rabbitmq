@@ -1,9 +1,10 @@
 # https://x-team.com/blog/set-up-rabbitmq-with-docker-compose/
+# docker run -it -rm --name rabbitmq -p 5672:5672 \\ -p 15672:15672 rabbitmq:3.10-management
 version: "3.2"
 
 services:
   rabbitmq:
-    image: rabbitmq:3.11.1
+    image: rabbitmq:3.10-management
     container_name: 'rabbitmq'
     ports:
         - 5672:5672

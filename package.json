@@ -1,10 +1,11 @@
 {
-  "name": "learning-rabbitmq",
-  "type": "module" ,
+  "name": "learning-rabbitmq-basic",
+  "type": "module",
   "version": "1.0.0",
   "description": "https://youtu.be/NQ3fZtyXji0",
   "main": "index.js",
   "scripts": {
+    "rabbmit": "docker-compose up -d",
     "send": "node ./src/send.js",
     "receive": "node ./src/receive.js"
   },

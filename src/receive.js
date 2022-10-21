@@ -3,13 +3,8 @@ const connection = await connect("amqp://localhost");
 const channel = await connection.createChannel();
 
 const queue = "message";
-const message = "**demo message**";
 
-console.log("init receive");
-
-await channel.assertQueue(queue, { durable: false });
+await channel.assertQueue(queue, { durable: true });
 channel.consume(queue, (msg) => {
-  console.log(msg);
+  console.log(`Receive Message: ${msg.content.toString()}`);
 });
-
-console.log("end receive");

@@ -5,9 +5,7 @@ const channel = await connection.createChannel();
 const queue = "message";
 const message = "**demo message**";
 
-console.log("init send");
+await channel.assertQueue(queue, { durable: true });
+channel.sendToQueue(queue, Buffer.from(message));
 
-await channel.assertQueue(queue, { durable: false });
-channel.assertQueue(queue, Buffer.from(message));
-
-console.log("end send");
+console.log(`Send Message: ${message}`);
