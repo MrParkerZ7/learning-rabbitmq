@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon .\\src\\server.js "
+    "rabbmit": "docker-compose up -d",
+    "publisher": "nodemon .\\src\\publisher\\server.js ",
+    "consumer": "nodemon .\\src\\consumer\\app.js "
   },
   "author": "",
   "license": "ISC",

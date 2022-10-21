@@ -1,5 +1,5 @@
 const { connect } = require("amqplib");
-const { rabbitMQ } = require("./config");
+const { rabbitMQ } = require("../common/config");
 
 class Producer {
   channel;
@@ -10,7 +10,7 @@ class Producer {
     this.channel = await connection.createChannel();
   }
 
-  async publishMessage(routingKey, message) {
+  async publishMessage(logType, message) {
     if (!this.channel) {
       await this.createChannel();
     }
@@ -19,17 +19,21 @@ class Producer {
     await this.channel.assertExchange(exchangeName, "direct");
 
     const logDetails = {
-      logType: routingKey,
+      logType,
       message: message,
       dataTime: new Date(),
     };
     await this.channel.publish(
       exchangeName,
-      routingKey,
+      logType,
       Buffer.from(JSON.stringify(logDetails))
     );
 
-    console.log(`Send message '${message}' to exchange '${exchangeName}'`);
+    console.log(``);
+    console.log(`Send Message`);
+    console.log(`[Log Type] : ${logType}`);
+    console.log(`[Message] : ${JSON.stringify(message)}`);
+    console.log(`[Exchange Name] : ${exchangeName}`);
   }
 }
 

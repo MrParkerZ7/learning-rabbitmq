@@ -4,8 +4,36 @@
 
 - yarn install
 - yarn rabbmit
-- yarn send
-- yarn receive
+- yarn publisher
+- yarn consumer
+
+### Postman
+
+- [POST] : /sendLog
+- With log info
+
+```json
+{
+  "logType": "Info",
+  "message": {
+    "event": "Learning Genral Level",
+    "body": "Empty"
+  }
+}
+```
+
+- [POST] : /sendLog
+- With log warning
+
+```json
+{
+  "logType": "Warning",
+  "message": {
+    "event": "Learning Genral Level",
+    "body": "Empty"
+  }
+}
+```
 
 ### Ref Doc
 
