@@ -12,8 +12,8 @@ async function consumeMessage() {
   await channel.bindQueue(q.queue, rabbitMQ.exchangeName, "Info");
 
   channel.consume(q.queue, (msg) => {
-    const data = JSON.parse(msg.content);
-    console.log(`Consume Message`);
+    console.log(``);
+    console.log(`**Consume Message**`);
     console.log(`[Exchange Name] : ${rabbitMQ.exchangeName}`);
     console.log(`[Message] : ${msg.content.toString()}`);
     channel.ack(msg);

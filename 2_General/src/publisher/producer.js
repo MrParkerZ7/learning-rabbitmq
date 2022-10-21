@@ -30,10 +30,10 @@ class Producer {
     );
 
     console.log(``);
-    console.log(`Send Message`);
+    console.log(`**Send Message**`);
+    console.log(`[Exchange Name] : ${exchangeName}`);
     console.log(`[Log Type] : ${logType}`);
     console.log(`[Message] : ${JSON.stringify(message)}`);
-    console.log(`[Exchange Name] : ${exchangeName}`);
   }
 }
 

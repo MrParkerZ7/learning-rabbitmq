@@ -7,4 +7,5 @@ const queue = "message";
 await channel.assertQueue(queue, { durable: true });
 channel.consume(queue, (msg) => {
   console.log(`Receive Message: ${msg.content.toString()}`);
+  channel.ack(msg);
 });
