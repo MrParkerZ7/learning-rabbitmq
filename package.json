@@ -2,9 +2,9 @@
   "name": "learning-rabbitmq",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "rabbit": "docker-compose up -d"
+    "up": "docker-compose up -d",
+    "down": "docker-compose down"
   },
   "repository": {
     "type": "git",

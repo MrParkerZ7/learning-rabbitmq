@@ -13,7 +13,7 @@ async function consumeMessage() {
 
   channel.consume(q.queue, (msg) => {
     console.log(``);
-    console.log(`**Consume Message**`);
+    console.log(`**Consume_2 Message**`);
     console.log(`[Exchange Name] : ${rabbitMQ.ExchangeName}`);
     console.log(`[Message] : ${msg.content.toString()}`);
     channel.ack(msg);

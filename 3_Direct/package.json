@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "publisher": "nodemon .\\src\\publisher\\server.js ",
-    "consumer": "nodemon .\\src\\consumer\\app.js ",
-    "consumer_error": "nodemon .\\src\\consumer_error\\app.js "
+    "consumer_1": "nodemon .\\src\\consumer_1\\app.js ",
+    "consumer_2": "nodemon .\\src\\consumer_2\\app.js "
   },
   "author": "",
   "license": "ISC",

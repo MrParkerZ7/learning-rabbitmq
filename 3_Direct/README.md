@@ -3,14 +3,13 @@
 ### Links
 
 - http://localhost:3000/
-- http://localhost:15672/
 
 ### Run
 
 - yarn install
-- yarn rabbmit
 - yarn publisher
-- yarn consumer
+- yarn consumer_1
+- yarn consumer_2
 
 ### Postman
 
@@ -20,19 +19,6 @@
 ```json
 {
   "logType": "Info",
-  "message": {
-    "event": "Learning Genral Level",
-    "body": "Empty"
-  }
-}
-```
-
-- [POST] : /sendLog
-- With log warning
-
-```json
-{
-  "logType": "Warning",
   "message": {
     "event": "Learning Genral Level",
     "body": "Empty"

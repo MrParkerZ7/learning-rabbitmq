@@ -1,10 +1,11 @@
 # learning-basic
 
 ### Run
-
-- yarn install
-- yarn send
-- yarn receive
+```bash
+yarn install
+yarn send
+yarn receive
+```
 
 ### Ref Doc
 

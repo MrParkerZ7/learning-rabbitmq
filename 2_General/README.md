@@ -5,10 +5,11 @@
 - http://localhost:3000/
 
 ### Run
-
-- yarn install
-- yarn publisher
-- yarn consumer
+```bash
+yarn install
+yarn publisher
+yarn consumer
+```
 
 ### Postman
 

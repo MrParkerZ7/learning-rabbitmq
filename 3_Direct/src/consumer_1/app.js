@@ -7,14 +7,13 @@ async function consumeMessage() {
 
   await channel.assertExchange(rabbitMQ.ExchangeName, "direct");
 
-  const q = await channel.assertQueue(rabbitMQ.QueueWarningError);
+  const q = await channel.assertQueue(rabbitMQ.QueueInfo);
 
-  await channel.bindQueue(q.queue, rabbitMQ.ExchangeName, "Warning");
-  await channel.bindQueue(q.queue, rabbitMQ.ExchangeName, "Error");
+  await channel.bindQueue(q.queue, rabbitMQ.ExchangeName, "Info");
 
   channel.consume(q.queue, (msg) => {
     console.log(``);
-    console.log(`**Consume Error**`);
+    console.log(`**Consume_1 Message**`);
     console.log(`[Exchange Name] : ${rabbitMQ.ExchangeName}`);
     console.log(`[Message] : ${msg.content.toString()}`);
     channel.ack(msg);

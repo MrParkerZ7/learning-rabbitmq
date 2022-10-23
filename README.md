@@ -1,10 +1,13 @@
 # learning-rabbitmq
 
+- start docker on root-project before run sub-project
+
 ### Links
 
 - http://localhost:15672/
 
 ### Run
-
-- yarn install
-- yarn rabbit
+```bash
+yarn install
+yarn rabbit
+```
