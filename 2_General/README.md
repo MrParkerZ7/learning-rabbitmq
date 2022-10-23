@@ -1,5 +1,10 @@
 # learning-rabbitmq
 
+### Links
+
+- http://localhost:3000/
+- http://localhost:15672/
+
 ### Run
 
 - yarn install

@@ -5,7 +5,7 @@ class Producer {
   channel;
 
   async createChannel() {
-    const connection = await connect(rabbitMQ.url);
+    const connection = await connect(rabbitMQ.URL);
 
     this.channel = await connection.createChannel();
   }
@@ -15,8 +15,8 @@ class Producer {
       await this.createChannel();
     }
 
-    const exchangeName = rabbitMQ.exchangeName;
-    await this.channel.assertExchange(exchangeName, "direct");
+    const ExchangeName = rabbitMQ.ExchangeName;
+    await this.channel.assertExchange(ExchangeName, "direct");
 
     const logDetails = {
       logType,
@@ -24,14 +24,14 @@ class Producer {
       dataTime: new Date(),
     };
     await this.channel.publish(
-      exchangeName,
+      ExchangeName,
       logType,
       Buffer.from(JSON.stringify(logDetails))
     );
 
     console.log(``);
     console.log(`**Send Message**`);
-    console.log(`[Exchange Name] : ${exchangeName}`);
+    console.log(`[Exchange Name] : ${ExchangeName}`);
     console.log(`[Log Type] : ${logType}`);
     console.log(`[Message] : ${JSON.stringify(message)}`);
   }

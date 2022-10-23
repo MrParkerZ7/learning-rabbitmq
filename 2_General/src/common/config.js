@@ -1,7 +1,8 @@
 module.exports = {
   rabbitMQ: {
-    url: "amqp://localhost",
-    exchangeName: "RabbitMQ_Exchange_General",
-    sourceQueue: "RabbitMQ_Queue_General",
+    URL: "amqp://localhost",
+    ExchangeName: "RabbitMQ_Exchange_General",
+    QueueInfo: "RabbitMQ_Queue_Info_General",
+    QueueWarningError: "RabbitMQ_Queue_Warning_Error_General",
   },
 };
