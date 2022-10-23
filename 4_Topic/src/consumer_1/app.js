@@ -12,6 +12,7 @@ async function consumeMessage() {
   );
 
   const q = await channel.assertQueue(rabbitMQ.QueueInfo);
+  await channel.bindQueue(q.queue, rabbitMQ.ExchangeName, "queue.info.topic");
 
   channel.consume(q.queue, (msg) => {
     console.log(``);

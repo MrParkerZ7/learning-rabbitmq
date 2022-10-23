@@ -10,7 +10,7 @@ class Producer {
     this.channel = await connection.createChannel();
   }
 
-  async publishMessage(logType, message) {
+  async publishMessage(keyName, message) {
     if (!this.channel) {
       await this.createChannel();
     }
@@ -19,20 +19,20 @@ class Producer {
     await this.channel.assertExchange(ExchangeName, "direct");
 
     const logDetails = {
-      logType,
+      keyName,
       message: message,
       dataTime: new Date(),
     };
     await this.channel.publish(
       ExchangeName,
-      logType,
+      keyName,
       Buffer.from(JSON.stringify(logDetails))
     );
 
     console.log(``);
-    console.log(`**Send Message**`);
+    console.log(`**Publish Message**`);
     console.log(`[Exchange Name] : ${ExchangeName}`);
-    console.log(`[Log Type] : ${logType}`);
+    console.log(`[Key Name] : ${keyName}`);
     console.log(`[Message] : ${JSON.stringify(message)}`);
   }
 }

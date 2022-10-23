@@ -18,7 +18,7 @@ yarn consumer
 
 ```json
 {
-  "logType": "Info",
+  "keyName": "Info",
   "message": {
     "event": "Learning Genral Level",
     "body": "Empty"
@@ -31,7 +31,7 @@ yarn consumer
 
 ```json
 {
-  "logType": "Warning",
+  "keyName": "Warning",
   "message": {
     "event": "Learning Genral Level",
     "body": "Empty"

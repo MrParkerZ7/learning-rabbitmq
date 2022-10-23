@@ -18,7 +18,7 @@
 
 ```json
 {
-  "logType": "Info",
+  "keyName": "Info",
   "message": {
     "event": "Learning Genral Level",
     "body": "Empty"

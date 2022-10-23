@@ -6,7 +6,7 @@ const producer = new Producer();
 
 app.use(bodyParser.json("application/json"));
 app.post("/sendLog", async (req, res, next) => {
-  await producer.publishMessage(req.body.logType, req.body.message);
+  await producer.publishMessage(req.body.keyName, req.body.message);
   res.send();
 });
 
