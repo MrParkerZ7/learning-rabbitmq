@@ -1,8 +1,7 @@
 {
-  "name": "learning-rabbitmq-general",
+  "name": "learning-rabbitmq-direct",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "publisher": "nodemon .\\src\\publisher\\server.js ",
     "consumer_1": "nodemon .\\src\\consumer_1\\app.js ",
