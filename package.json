@@ -1,12 +1,10 @@
 {
-  "name": "learning-rabbitmq-basic",
-  "type": "module",
+  "name": "learning-rabbitmq",
   "version": "1.0.0",
-  "description": "https://youtu.be/NQ3fZtyXji0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "send": "node ./src/send.js",
-    "receive": "node ./src/receive.js"
+    "rabbit": "docker-compose up -d"
   },
   "repository": {
     "type": "git",
@@ -17,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/MrParkerZ7/learning-rabbitmq/issues"
   },
-  "homepage": "https://github.com/MrParkerZ7/learning-rabbitmq#readme",
-  "dependencies": {
-    "amqplib": "^0.10.3"
-  }
+  "homepage": "https://github.com/MrParkerZ7/learning-rabbitmq#readme"
 }

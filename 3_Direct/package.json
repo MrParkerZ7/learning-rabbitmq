@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "rabbit": "docker-compose up -d",
     "publisher": "nodemon .\\src\\publisher\\server.js ",
     "consumer": "nodemon .\\src\\consumer\\app.js ",
-    "consumer_issue": "nodemon .\\src\\consumer_issue\\app.js "
+    "consumer_error": "nodemon .\\src\\consumer_error\\app.js "
   },
   "author": "",
   "license": "ISC",
