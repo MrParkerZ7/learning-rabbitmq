@@ -11,3 +11,5 @@
 yarn install
 yarn rabbit
 ```
+
+### Remark : missing fanout topic
